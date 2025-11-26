@@ -1,0 +1,113 @@
+:root{ 
+  --bg:#06040a;
+  --card:#0f0b16;
+  --muted:#9aa0b2;
+  --neon:#7c3aed;
+  --neon-2:#ff4d8a;
+  --glass: rgba(255,255,255,0.04);
+  --accent: linear-gradient(90deg,var(--neon),#9b6bff 60%,var(--neon-2));
+  --radius:14px;
+  --fw-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --fw-display: "Poppins", sans-serif;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:var(--fw-sans);
+  background:radial-gradient(1200px 600px at 10% 10%, rgba(124,58,237,0.08), transparent 10%), var(--bg);
+  color:#e9eef8;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+
+a{color:var(--neon); text-decoration:none}
+a:hover{color:var(--neon-2)}
+
+.navbar{padding-top:18px; padding-bottom:6px}
+.brand-text{font-family:var(--fw-display); font-weight:700; letter-spacing:0.2px; color:#fff}
+.brand-text-small{font-family:var(--fw-display); font-weight:600; color:var(--muted)}
+
+#logo-img{filter:drop-shadow(0 6px 18px rgba(124,58,237,0.15)); transition:filter .25s ease}
+
+.hero{
+  min-height:68vh;
+  background-size:cover;
+  background-position:center;
+  position:relative;
+  display:flex;
+  align-items:center;
+}
+.hero-inner{position:relative; z-index:2; padding:5rem 1rem}
+.hero-spotlight{position:absolute; inset:0; background:radial-gradient(600px 300px at 50% 40%, rgba(124,58,237,0.14), transparent 20%); pointer-events:none}
+
+.display-3{font-family:var(--fw-display); font-weight:700; color:#fff; text-shadow:0 10px 30px rgba(0,0,0,0.6)}
+.lead{color:#d7dbe8; font-size:1.125rem}
+
+.btn-ghost{background:transparent; border:1px solid rgba(255,255,255,0.08); color:#fff; padding:.65rem 1.1rem; border-radius:10px; transition:all .2s}
+.btn-ghost:hover{transform:translateY(-4px); border-color:rgba(124,58,237,0.6)}
+
+.btn-neon{
+  background:var(--accent);
+  background-size:200% 200%;
+  color:#07030b;
+  border:none;
+  padding:.75rem 1.3rem;
+  border-radius:12px;
+  box-shadow:0 8px 30px rgba(124,58,237,0.18), 0 2px 8px rgba(0,0,0,0.6) inset;
+  transition:transform .18s ease, background-position .6s;
+}
+.btn-neon:hover{transform:translateY(-6px); background-position:100% 0}
+
+.btn-outline-neon{border:1px solid rgba(124,58,237,0.35); color:#fff; background:transparent; border-radius:10px; padding:.45rem .75rem}
+
+.bg-contrast{background:linear-gradient(180deg, rgba(15,8,25,0.6), rgba(10,6,18,0.85)); padding:3.5rem 0}
+
+.section-title{font-family:var(--fw-display); font-weight:700; color:var(--neon); margin-bottom:0.6rem}
+.section-lead{color:var(--muted)}
+
+.card{background:var(--card); border-radius:var(--radius); border:1px solid rgba(255,255,255,0.03)}
+.glass{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); backdrop-filter: blur(6px); border:1px solid rgba(255,255,255,0.04)}
+
+.chip{display:inline-block; font-size:.8rem; padding:.25rem .6rem; border-radius:999px; background:rgba(255,255,255,0.03); color:var(--muted); margin-right:.5rem}
+
+.feature{padding:.65rem 0; color:#d7dbe8}
+
+.testimonial{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:12px; border:1px solid rgba(124,58,237,0.12)}
+.testimonial p{margin:0; color:#f1f3fb}
+
+.neon-indicators button{width:12px;height:12px;border-radius:50%;background:rgba(255,255,255,0.12);border:none;margin:0 6px}
+.neon-indicators .active{background:linear-gradient(90deg,var(--neon),var(--neon-2)); box-shadow:0 6px 20px rgba(124,58,237,0.18)}
+
+.img-fluid.rounded{border-radius:10px; box-shadow:0 10px 30px rgba(0,0,0,0.45)}
+
+.site-footer{background:linear-gradient(180deg, rgba(0,0,0,0.2), transparent); color:var(--muted)}
+
+.portrait{width:140px;height:140px;object-fit:cover;border-radius:50%;box-shadow:0 12px 40px rgba(0,0,0,0.6)}
+
+.form-text.text-danger{min-height:1.25rem}
+
+@media (max-width:768px){
+  .display-3{font-size:2rem}
+  .hero-inner{padding:3rem 1rem}
+  .portrait{width:110px;height:110px}
+}
+
+.light-mode{
+  --bg:#fbfbff;
+  --card:#ffffff;
+  --muted:#515c72;
+  --neon:#221044;
+  --neon-2:#ff7aa2;
+  --text:#0b0b0b;
+}
+.light-mode body{background:var(--bg); color:var(--text)}
+.light-mode .brand-text,
+.light-mode .brand-text-small,
+.light-mode .navbar-nav .nav-link{color:var(--text)}
+.light-mode a{color:var(--neon)}
+.light-mode a:hover{color:var(--neon-2)}
+.light-mode #logo-img{filter:none}
+
