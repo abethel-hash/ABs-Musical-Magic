@@ -29,7 +29,7 @@
 1. Clone the repository:
 
    ```
-   git clone  https://github.com/abethel-hash/aliyahs-musical-magic.git
+   git clone  https://github.com/abethel-hash/ABs-Musical-Magic.git
    ```
 2. Open `index.html` in your preferred browser.
 
